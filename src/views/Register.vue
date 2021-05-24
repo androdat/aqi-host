@@ -41,7 +41,7 @@
               </div>
 
               <div class="actions md-layout md-alignment-center-space-between">
-                <a href="/register">Register</a>
+                <a @click=" router('/register')">Register</a>
                 <md-button class="md-raised md-primary" @click="auth">Log in</md-button>
               </div>
 
