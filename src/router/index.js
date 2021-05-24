@@ -3,6 +3,15 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Graphs from '../views/Graphs.vue'
 import Prediction from '../views/Prediction.vue'
+import Register from '../views/Register.vue'
+import Login from '../views/Login.vue'
+
+
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+
+Vue.use(VueMaterial)
 
 Vue.use(VueRouter)
 
@@ -18,9 +27,19 @@ const routes = [
     component: Graphs
   },
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/',
+    name: 'Register',
+    component: Register
+  },
+  {
+    path: '/register',
+    name: 'Login',
+    component: Login
   },
   
 ]

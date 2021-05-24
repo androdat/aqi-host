@@ -3,12 +3,12 @@
     <div class="grid-container">
       <div class="grid-item grid-item-3 nav"></div>
       <div class="grid-item grid-item-1">
-        <div @click=" router('/')" class="logo-text">
+        <div @click=" router('/home')" class="logo-text">
           <img style="width:40px; heignt:40px;" src="../images/worldwide.png" alt />
           <p>aqi</p>
         </div>
         <div class="button-parent hide-for-mobile">
-          <div @click=" router('/')" class="button" style>
+          <div @click=" router('/home')" class="button" style>
             <p>Home</p>
           </div>
           <div @click=" router('Graphs')" class="button">
@@ -452,7 +452,7 @@ function nav() {
   padding: 0;
 
   position: absolute;
-  bottom: 1%;
+  bottom: 14%;
   left: 6%;
   transform: translate(0%, 0%);
   font-family: Poppins;

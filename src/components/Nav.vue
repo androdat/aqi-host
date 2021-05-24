@@ -6,13 +6,13 @@
     <nav class="main-nav" id="main-nav">
       <ul>
         <li>
-          <a @click=" router('/')">Home</a>
+          <a  style="color:#ffffff; text-decoration: none;" @click=" router('/home')">Home</a>
         </li>
         <li>
-          <a @click=" router('Graphs')">Graphs</a>
+          <a   style="color:#ffffff; text-decoration: none; " @click=" router('Graphs')">Graphs</a>
         </li>
         <li>
-          <a @click=" router('Prediction')">Prediction</a>
+          <a   style="color:#ffffff; text-decoration: none;" @click=" router('Prediction')">Prediction</a>
         </li>
       </ul>
     </nav>
