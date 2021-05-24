@@ -109,7 +109,7 @@ export default {
     // END
 
     let res = await axios.get(
-      `http://api.worldweatheronline.com/premium/v1/past-weather.ashx?tp=24&q=Bengaluru&date=${startdate}&enddate=${enddate}&key=2b0714b1fb8e4b38a93185230211605&format=json`
+      `https://api.worldweatheronline.com/premium/v1/past-weather.ashx?tp=24&q=Bengaluru&date=${startdate}&enddate=${enddate}&key=2b0714b1fb8e4b38a93185230211605&format=json`
     );
     let restwo = await axios.get(
       "https://aqi-backend.herokuapp.com/aqiMonthChart"
