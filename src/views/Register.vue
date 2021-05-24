@@ -21,7 +21,7 @@
               <div class="title">
                 <img src="../images/worldwide.png" />
                 <div class="md-headline">AQI</div>
-                <div class="md-subheading">Select country and login to continue</div>
+                <div class="md-subheading">Select city and login to continue</div>
               </div>
 
               <md-autocomplete v-model="selectedCountry" :md-options="countries">
