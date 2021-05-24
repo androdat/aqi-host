@@ -14,6 +14,9 @@
         <li>
           <a   style="color:#ffffff; text-decoration: none;" @click=" router('Prediction')">Prediction</a>
         </li>
+         <li>
+          <a   style="color:#ffffff; text-decoration: none;" @click=" router('/')">Logout</a>
+        </li>
       </ul>
     </nav>
   </div>
