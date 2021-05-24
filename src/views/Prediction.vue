@@ -38,7 +38,7 @@
                 <p>{{aqi}}</p>
               </div>
               <p id="status">{{status}}</p>
-              <p id="tag">Predicted AQI <span>for tomorrow </span>  </p>
+              <p id="tag">Predicted AQI <span>for tomorrow (avg) </span>  </p>
             </div>
           </div>
           <div class="text">
