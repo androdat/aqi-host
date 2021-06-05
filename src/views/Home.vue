@@ -83,7 +83,7 @@ export default {
     this.date = n;
 
     let restwo = await axios.get(
-      "https://api.waqi.info/feed/bangalore/?token=4a410c05fe249e46b247c4a8196b693139cd5210"
+      "https://api.waqi.info/feed/geo:12.9166;77.6101/?token=1f8f7568130105bcb431a355612827b9788f128a"
     );
 
     
