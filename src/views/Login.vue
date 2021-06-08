@@ -76,7 +76,7 @@ export default {
       ],
 
       login: {
-        email: "",
+        email: "saxenavedant61@gmail.com",
         password: "",
         gender: ""
       }
