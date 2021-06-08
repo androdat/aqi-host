@@ -77,7 +77,7 @@ export default {
   },
   async mounted() {
     nav();
-
+    
     //SETTING DATE
     let dateObj = new Date();
     let myDate =
@@ -114,13 +114,15 @@ export default {
     let restwo = await axios.get(
       "https://aqi-backend.herokuapp.com/aqiMonthChart"
     );
-
+    
+    console.log(restwo.data)
     for (var i = 0; i < res.data.data.weather.length; i++) {
       this.date.push(convertDate(res.data.data.weather[i].date));
       this.humidity.push(res.data.data.weather[i].hourly[0].humidity);
       this.temp.push(res.data.data.weather[i].avgtempC);
     }
     this.aqi_date = restwo.data.date;
+    
     this.aqi = restwo.data.aqi;
     this.destroy = false;
     for (let i = 0; i < this.aqi_date.length; i++) {
@@ -136,7 +138,7 @@ export default {
       this.type = "line";
       this.timeline = "Monthly";
       this.typename = "Line";
-      this.font = 18;
+      this.font = 16;
       this.plotGraph(this.font);
     }
 
@@ -169,17 +171,22 @@ export default {
       this.$router.push(x);
     },
     plotGraph(font) {
+      console.log(font)
+      console.log("plot graph")
       g1(this.aqi_date, this.aqi, this.type, font);
       g2(this.date, this.temp, this.type, font);
       g3(this.date, this.humidity, this.type, font);
+      console.log(this.date,this.temp,this.humidity)
     },
     plotGraphWeekly(font) {
+      console.log("plot graph weekly")
       g1(this.aqi_date.slice(23, 30), this.aqi.slice(23, 30), this.type, font);
       g2(this.date.slice(23, 30), this.temp.slice(23, 30), this.type, font);
       g3(this.date.slice(23, 30), this.humidity.slice(23, 30), this.type, font);
     },
     slice() {
       if (this.timeline == "Monthly") {
+        console.log("ploting weekly")
         destroy(chartobj);
         g1(
           this.aqi_date.slice(23, 30),
@@ -261,7 +268,7 @@ function g1(aqi_date, aqi, type, font) {
         {
           label: "AQI",
           data: aqi,
-          backgroundColor: [, "white"],
+          backgroundColor: [ "white"],
           borderColor: ["white"],
           borderWidth: 1
         }
