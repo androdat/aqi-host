@@ -122,7 +122,7 @@ export default {
           params
         }
       );
-
+      console.log(res);
       this.aqi = 94;
       if (this.aqi <= 30) {
         this.status = "Good";
